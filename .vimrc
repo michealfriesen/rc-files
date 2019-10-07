@@ -1,15 +1,19 @@
 syntax on
 
+set encoding=utf-8
+
 " Automatic indentation rules
 set autoindent
 filetype plugin indent on
 set smarttab
+
 "set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftround
 set shiftwidth=4
 set backspace=indent,eol,start
+
 "set formatoptions=tcqor
 set formatoptions=tcqoraw
 
@@ -20,17 +24,15 @@ set listchars=tab:>-
 set hlsearch
 set ignorecase
 set incsearch
-
 set wildmenu
-
 set ruler
 set number
-
 set showcmd
 
 " Printer Device
 set pdev=HPLJ
 set printoptions=number:y,syntax:y,paper:letter
+
 " Printer Command
 set pexpr=system('/usr/local/bin/lpr'\ .\ (&printdevice\ ==\ ''\ ?\ ''\ :\ '\ -P'\ .\ &printdevice)\ .\ '\ '\ .\ v:fname_in)\ .\ delete(v:fname_in)\ +\ v:shell_error
 
@@ -48,41 +50,15 @@ Plugin 'embear/vim-localvimrc'
 Plugin 'valloric/youcompleteme'
 call vundle#end()
 
-" Per-terminal settings
-
-if (&term == "screen")
-    set mouse=a
-    set t_Co=256
-    colorscheme 256_blackdust
-    set background=dark
-endif
-
-if (&term == "xterm")
-    set mouse=a
-    set t_Co=256
-    " Light Theme
-    set background=light
-    colorscheme PaperColor
-    " Dark Theme (either one)
-    " set background=dark
-    " colorscheme desert256
-    " colorscheme xoria256
-endif
-
-if has("gui_running")
-    " colorscheme desert
-    colorscheme xoria256
-    set background=dark
-    set akm
-    set guifont=Consolas
-endif
-
 if (v:version > 700)
     set spelllang=en_us
 endif
 
 " Make tags command to allow for ctag creation
 command! MakeTags !exctags -R
+
+" Color Scheme
+colo desert
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
@@ -96,8 +72,8 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " YouCompleteMe
-"let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
-"let g:ycm_key_list_select_completion = ['<Down>']
+let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
+let g:ycm_key_list_select_completion = ['<Down>']
 
 " ViewDoc
 let g:viewdoc_open='vnew'
