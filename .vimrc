@@ -95,4 +95,4 @@ autocmd BufRead,BufNewFile *.td set filetype=tablegen
 autocmd BufRead,BufNewFile *.etch set filetype=etch
 autocmd BufRead,BufNewFile *.log set filetype=liblog
 
-source ~/.vim/freebsd.vim
+" source ~/.vim/freebsd.vim
