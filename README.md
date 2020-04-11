@@ -5,7 +5,7 @@ This is my personal repository for rc files and other configuration files so I c
 ### Current Setup: 
 Vim with some core settings and important vundle plugins like You Complete Me and NERDTree. 
 
-**Note:** To install the vim plugins, launch vim and run :PluginInstall
+First install vundle then run :PluginInstall
 
 
 I am also using tmux which is a nice terminal multiplexer. It allows for easier window managment when sshing. It also provides session management. 
