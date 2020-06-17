@@ -39,7 +39,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'embear/vim-localvimrc'
 Plugin 'yuttie/comfortable-motion.vim'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'neoclide/coc.nvim'
+"Plugin 'neoclide/coc.nvim'
 Plugin 'junegunn/fzf', { 'dir':'/usr/local/bin/fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
 Plugin 'whiteinge/diffconflicts'
