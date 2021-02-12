@@ -19,6 +19,9 @@ set hlsearch
 set ignorecase
 set incsearch
 
+" Relative Line Numbers
+set nu rnu
+
 " Clipboard
 set clipboard=unnamed
 
@@ -75,6 +78,10 @@ let g:NERDTreeDirArrowCollapsible = '+'
 map <C-n> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" NERDCommenter
+let g:NERDCreateDefaultMappings = 1
+let g:NERDSpaceDelims = 1
 
 " Bind spellcheck to F10
 nmap <silent> <F10> :silent set spell!<CR>
